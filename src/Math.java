@@ -2,6 +2,7 @@
 public class Math {
 	double cost;
 	double moneyGiven;
+	//how about arrays?
 
 	void changeReturn() {
 		double change = moneyGiven - cost;
@@ -25,8 +26,11 @@ public class Math {
 		int fiveCents = (int) ((changeOne - (0.5 * fiftyCents) - (0.2 * twentyCents) - (0.1 * tenCents)) / 0.05);
 		int twoCents = (int) ((changeOne - (0.5 * fiftyCents) - (0.2 * twentyCents) - (0.1 * tenCents)
 				- (0.05 * fiveCents)) / 0.02);
+		double changeTwo = (changeOne - (0.5 * fiftyCents) - (0.2 * twentyCents) - (0.1 * tenCents)
+				- (0.05 * fiveCents) - (0.02 * twoCents));
 		int oneCents = (int) ((changeOne - (0.5 * fiftyCents) - (0.2 * twentyCents) - (0.1 * tenCents)
 				- (0.05 * fiveCents) - (0.02 * twoCents)) / 0.01);
+		System.out.println(changeTwo);
 
 		
 		// jak to usprawnic zeby najpierw zrobilo to co powinno sie wydarzyc - dobra kwoata
