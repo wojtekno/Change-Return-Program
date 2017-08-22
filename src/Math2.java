@@ -24,3 +24,4 @@ public class Math2 {
 	}
 	
 }
+//wystarczy wiedzie cnominaly dostepne i ile wydać, uzyc while
