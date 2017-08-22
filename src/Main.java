@@ -9,12 +9,19 @@ public class Main {
 //		m = new Math2();
 		
 		
+		//operating on double didn't work out
+//		System.out.println("How much do you have to pay?");
+//		Math3.cost = scan.nextDouble();
+//		System.out.println("How much you give?");
+//		Math3.moneyYouGive = scan.nextDouble();
+//		Math3.returnChange();
 		
+		//so I used int
 		System.out.println("How much do you have to pay?");
-		Math3.cost = scan.nextDouble();
+		Usingints.cost = scan.nextDouble();
 		System.out.println("How much you give?");
-		Math3.moneyYouGive = scan.nextDouble();
-		Math3.returnChange();
+		Usingints.moneyYouGive = scan.nextDouble();
+		Usingints.returnChange();
 	}
 
 }
