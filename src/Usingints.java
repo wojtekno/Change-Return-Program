@@ -1,4 +1,4 @@
-
+// so I used int instead of double and than just divide it by 100 - and it worked :)
 public class Usingints {
 	static double[] money = { 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 	static int[] amount;
@@ -6,43 +6,43 @@ public class Usingints {
 	static double cost;
 	static double moneyYouGive;
 	static double change;
+	static double youHaveNow;
 
 	static void returnChange() {
 		amount = new int[moneyLength];
 		change = (100 * moneyYouGive - 100 * cost);
-		System.out.println(cost); // i print it to find out how the change acts
-		System.out.println(moneyYouGive); // i print it to find out how the
-											// change acts
-		System.out.println("You should get " + change / 100); // i print it to
-																// find
-		// out how the change
-		// acts
+		System.out.println(cost);
+		System.out.println(moneyYouGive);
+		System.out.println("You should get " + change / 100);
 		for (int i = 0; i < moneyLength; i++) {
 			while (change >= money[i]) {
-//				System.out.println("now change is: " + change / 100); // i print
-																		// it to
-				// find out how
-				// the change
-				// acts
 				change -= money[i];
-//				System.out.println("and now it's:" + change / 100); // i print
-																	// it to
-				// find out how
-				// the change
-				// acts
 				amount[i] += 1;
 
 			}
-			// amount[i] -= 1;
-			// change += ((int)100 *money[i]) / 100;
+
 			if (amount[i] > 0) {
-				System.out.println("You get " + amount[i] + " of " + money[i] / 100);
+				System.out.print("You get " + amount[i] + " of " + money[i] / 100);
+
 			}
-//			if (money[i] == 100 ) {
-//				System.out.print(" = " + (( moneyYouGive) - change));
-//			}
-//			System.out.println();
+			// here I show how many int you have so far - "100" in array = 1 in
+			// reality
+			if (money[i] == 100) {
+				for (int j = 0; j <= i; j++) {
+					youHaveNow += money[j] * amount[j];
+				}
+				System.out.print("now you have = " + youHaveNow / 100);
+			}
+			if (amount[i] > 0 || money[i] == 100) {
+				System.out.println();
+			}
 
 		}
+		// summing up once again for user
+		youHaveNow = 0;
+		for (int i = 0; i < moneyLength; i++) {
+			youHaveNow += money[i] * amount[i];
+		}
+		System.out.println("So in total you got " + youHaveNow / 100);
 	}
 }
